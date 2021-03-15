@@ -8,7 +8,7 @@ parser.add_argument("filename")
 args = parser.parse_args()
 file = args.filename
 
-print("Sugarcrash/Surf-Exel v1.0-beta")
+print("Sugarcrash/Surf-Exel v1.0")
 print("This is Free and Open Software with no Warranty Whatsoever")
 print('Made by Suvid Datta\n')
 
@@ -18,13 +18,14 @@ while True:
         print('''
         Here are the commands you can use:
 
-    r for reading the file \n
-    w for writing \n
-    ov to overwrite and destroy the contents of a file \n
-    i to insert text at the end of the file
-    q to quit
-        
-        
+            help to open up all the commands
+            r to read the file \n
+            w to write the file \n
+            ov to overwrite and destroy the contents of a file \n
+            i to insert text at the end of the file \n
+            q to quit \n
+
+            PS- I bet you love sugar :)      
         ''')
     elif x == 'r':
         with open(file,'r') as bruh:
