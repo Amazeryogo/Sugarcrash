@@ -18,7 +18,7 @@ while True:
         print('''
         Here are the commands you can use:
 
-            help to open up all the commands
+            help to open up all the commands\n
             r to read the file \n
             w to write the file \n
             ov to overwrite and destroy the contents of a file \n
@@ -46,3 +46,10 @@ while True:
             print("done!")
     elif x == 'q':
         quit()
+    elif x == 'ov':
+        with open(file,'w+') as f:
+            f.truncate()
+            f.close()
+            print("done!")
+    else:
+        print("command not found, try running help to find commands")
