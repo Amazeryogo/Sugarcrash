@@ -1,7 +1,6 @@
 import argparse
-import sys 
-#print("Enter the data") 
-#data = sys.stdin.read()  
+import sys
+import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument("filename")
@@ -25,12 +24,20 @@ while True:
             i to insert text at the end of the file \n
             q to quit \n
 
-            PS- I bet you love sugar :)      
+            shell commands can be done by 2 ways:
+            just by typing:
+            >>ls
+            or using the sh command
+            >>sh
+            ls
+           ___________________________
+           
+           PS- I bet you love sugar :)
         ''')
     elif x == 'r':
         with open(file,'r') as bruh:
             c = bruh.read()
-            print(c)
+            sys.stdout.write(c)
             bruh.close()
     elif x == 'w':
         data = sys.stdin.read()
@@ -45,11 +52,16 @@ while True:
             f.close()
             print("done!")
     elif x == 'q':
+        print("ok bye!")
         quit()
     elif x == 'ov':
         with open(file,'w+') as f:
             f.truncate()
             f.close()
             print("done!")
-    else:
-        print("command not found, try running help to find commands")
+    elif x == 'sh':
+        command = sys.stdin.read()
+        os.system(command)
+    else:        
+        os.system(x)
+
