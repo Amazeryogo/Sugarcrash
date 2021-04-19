@@ -12,7 +12,7 @@ print("This is Free and Open Software with no Warranty Whatsoever")
 print('Made by Suvid Datta\n')
 
 while True:
-    x = input(">>")
+    x = input(">⃞")
     if x == "help":
         print('''
         Here are the commands you can use:
